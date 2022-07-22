@@ -1,6 +1,6 @@
 function getNewIdeas() {
-    var ideas = [];
-    var idea = {};
+    let ideas = [];
+    let idea = {};
     idea.title = "";
     idea.description = "";
     idea.tags = [];
