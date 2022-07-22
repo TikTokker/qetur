@@ -16,13 +16,23 @@
             this.addEventListener(eventType, fn, options);
         };
         
-        Object.prototype.m$ = 
-
+        Object.prototype.m$ = function (fn) {
+            const elements = [];
+            for(let i = 0; i < this.length; i++) {
+                elements.push(fn(this[i], i, this))
+            }
+            return elements
+        }
 
         $$$('*').forEach(el => {
             el.$$('click', () => alert(`погружение ${el.tagName}`), { capture: true })
             el.$$('click', () => alert(`всплытие ${el.tagName}`))
         });
+
+        const arr = ['a', 'b', 'c'];
+        const newArr = arr.m$((el, idx) => el + idx);
+
+        console.log(newArr)
 
     </script>
 </body>
