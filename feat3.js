@@ -1,5 +1,5 @@
 function generateItems(items) {
-  var itemsHtml = '';
+  let itemsHtml = '';
   for (var i = 0; i < items.length; i++) {
     itemsHtml += '<li>' + items[i] + '</li>';
   }
