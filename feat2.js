@@ -5,3 +5,4 @@ function generatePeople(people) {
   }
   return peopleHTML;
 }
+
