@@ -1,6 +1,7 @@
 function getNewIdeas() {
     let ideas = [];
     let idea = {};
+
     idea.title = "";
     idea.description = "";
     idea.tags = [];
@@ -8,3 +9,4 @@ function getNewIdeas() {
     ideas.push(idea);
     return ideas;
 }
+

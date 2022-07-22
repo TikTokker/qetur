@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="btn-1">click 1</button>
+    <!-- <button class="btn-2">click 1</button> -->
+    <script>
+        Object.prototype.$ = (selector) => document.querySelector(selector);
+        Object.prototype.$$$ = (selector) => document.querySelectorAll(selector);
+        Object.prototype.$$ = function (eventType, fn, options = false) {
+            this.addEventListener(eventType, fn, options);
+        };
+        
+        Object.prototype.m$ = 
+
+
+        $$$('*').forEach(el => {
+            el.$$('click', () => alert(`погружение ${el.tagName}`), { capture: true })
+            el.$$('click', () => alert(`всплытие ${el.tagName}`))
+        });
+
+    </script>
+</body>
+</html>
